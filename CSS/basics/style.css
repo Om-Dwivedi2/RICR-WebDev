@@ -1,0 +1,15 @@
+h1{
+    color: red;
+}
+*{
+background-color: bisque;
+}
+#inside{
+    color: white;
+}
+.heading{
+    color: aqua;
+}
+h2{
+    background: linear-gradient(267deg, rgba(34, 193, 195, 1) 0%, rgba(232, 253, 45, 1) 67%);
+}
