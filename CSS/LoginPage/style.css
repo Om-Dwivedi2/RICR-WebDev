@@ -1,0 +1,75 @@
+body{
+    background-color: #4070f4;
+}
+
+#mainbox {
+  background-color: aqua;
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+#formHeading{
+    
+    color: blue;
+    text-align: center;
+}
+
+#loginForm{
+    
+    width: max-content;
+    margin: 30px auto;
+}
+
+.formField{
+    padding: 10px;
+    label{
+        font-size: large;
+    }
+}
+
+.formField input{
+    padding: 10px;
+    border-radius: 20px;
+    outline-color: rgb(0, 0, 255);
+    border: 1px solid black;
+}
+
+#fromControl{
+    
+    margin: auto;
+    width: fit-content;
+
+    button{
+        border-radius: 15px;
+        padding: 5px;
+        margin: 10px;
+    }
+
+    #cancelButton{
+        background-color: red;
+        border: 2px solid black;
+        color: white;
+    }
+    #submitButton{
+        background-color: rgb(44, 210, 44);
+        border: 2px solid black;
+        color: white;
+    }
+
+    
+    #cancelButton:hover{
+        color: red;
+        border: 2px solid red;
+        background-color: white;
+    }
+
+    #submitButton:hover{
+        color: rgb(44, 210, 44);
+        background-color: white;
+        border: 2px solid rgb(44, 210, 44);
+    }
+
+}

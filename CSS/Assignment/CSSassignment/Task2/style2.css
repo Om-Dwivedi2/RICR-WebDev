@@ -1,0 +1,14 @@
+
+#firstPart{
+    width: 500px;
+    background-color: blue;
+    color: blueviolet;
+    display: inline-block;
+
+}
+
+#secondPart{
+    width: 800px;
+    background-color: bisque;
+    display: inline-block;
+}
