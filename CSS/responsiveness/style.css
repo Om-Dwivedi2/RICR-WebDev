@@ -1,0 +1,22 @@
+#mainDiv{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+
+    .suvDiv{
+        border: 5px solid #f10b0b;
+        border-radius: 15px;
+        padding: 20px;
+        background-color: whitesmoke;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #mainDiv{
+        grid-template-columns: auto auto auto;
+    }
+}
+
+

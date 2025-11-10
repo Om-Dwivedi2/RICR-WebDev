@@ -1,0 +1,56 @@
+#main{
+    
+    margin: 0px 70px;
+    font-family: sans-serif;
+    /* border: 1px solid black; */
+}
+
+#navBar{
+    margin: 0px;
+    padding: 25px 0px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    #navBar1{
+        font-size: x-large;
+    }
+    #navBar2{
+        font-size: large;
+    }
+    #navBar3{
+        font-size: large;
+        #signIn{
+            padding: 10px;
+        }
+        #block{
+            padding: 10px;
+            background-color: black;
+            border-radius: 10px;
+            color: white;
+        }
+    }
+    
+}
+
+#emailEntry{
+    display: flex;
+    #welcome{
+        width: 800px;
+        h1{
+            margin: 80px 60px 20px 0px;
+            font-size: 300%;
+            color: rgb(41, 40, 40);
+        }
+        p{
+            margin: 20px 60px 20px 0px;
+            font-size: x-large;
+            color: rgb(140, 140, 140);
+        }
+    }
+    img{
+        width: 500px;
+        height: 500px;
+        border-radius: 10px;
+    }
+
+}
