@@ -1,59 +1,83 @@
-h1 {
-  width: 200px;
+#first{
+  width: 100px;
   border: 1px solid #000;
-  margin-left: 0px;
 }
-h1:hover {
-  /* margin-left: 200px; */
-  width: 400px;
+#first:hover{
+  width: 500px;
   transition: width 5s;
 }
 
-#outer {
+#outer{
+  margin-top: 20px;
   width: 500px;
   height: 50px;
   border: 1px solid #000;
-  #inner {
-    width: 0%;
+  #inner{
+    width: 0px;
+    height: 50px;
+  }
+}
+
+#outer:hover{
+  #inner{
+    background-color: red;
+    width: 500px;
+    transition: background-color 5s , width 5s;
+  }
+}
+
+#outer1{
+  width: 500px;
+  height: 50px;
+  margin-top: 20px;
+  border: 1px solid #000;
+  #inner1{
+    width: 0px;
     height: 50px;
     background-color: red;
   }
+
 }
 
-#outer:hover {
-  #inner {
-    width: 100%;
+#outer1:hover{
+  #inner1{
+    width: 500px;
     background-color: green;
-    transition: width 5s ease-in-out, background-color 5s;
+    transition: background-color 5s , width 5s;
   }
 }
 
-#outer1 {
+#outer2{
   width: 500px;
   height: 50px;
   border: 1px solid #000;
+  margin-top: 20px;
 
-  #inner1 {
-    height: 50px;
+  #inner2{
+  width: 0px;
+  height: 50px;  
   }
 }
 
-#outer1:hover {
-  #inner1 {
+#outer2:hover{
+  #inner2{
+    width: 500px;
+    transition: width 5s;
     animation: myAnimation 5s linear;
   }
 }
 
+
 @keyframes myAnimation {
-  0% {
+  0%{
     width: 0%;
     background-color: red;
   }
-  50% {
+  50%{
     width: 50%;
     background-color: yellow;
   }
-  100% {
+  100%{
     width: 100%;
     background-color: green;
   }

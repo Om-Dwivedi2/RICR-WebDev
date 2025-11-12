@@ -1,24 +1,33 @@
 #main{
     
-    margin: 0px 70px;
+    margin: 0px 40px;
     font-family: sans-serif;
     /* border: 1px solid black; */
+    h1{
+        margin: auto;
+        width: 500px;
+        text-align: center; 
+        font-size: 250%;
+        color: rgb(57, 55, 55);
+    }
 }
 
 #navBar{
     margin: 0px;
     padding: 25px 0px;
-    display: flex;
-    justify-content: space-between;
+    background-color: white;
     position: sticky;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
     #navBar1{
-        font-size: x-large;
+        font-size: large;
     }
     #navBar2{
-        font-size: large;
+        font-size: medium;
     }
     #navBar3{
-        font-size: large;
+        font-size: medium;
         #signIn{
             padding: 10px;
         }
@@ -46,11 +55,191 @@
             font-size: x-large;
             color: rgb(140, 140, 140);
         }
+
+        #email{
+            display: flex;
+            padding: 10px 0px;
+            input{
+                width: 250px;
+                height: 35px;
+                border-radius: 5px;
+                padding: 0px;
+            }
+            button{
+                margin: 0px 25px;
+                padding: 13px 20px;
+                color: white;
+                background-color: rgb(47, 46, 46);
+                border-radius: 10px;
+                font-size: small;
+                font-weight: bold;
+                border: 0px;
+            }
+            button:hover{
+                background-color: black;
+            }
+        }
+
+        #terms{
+            color: rgb(140, 140, 140);
+        }
+
     }
     img{
-        width: 500px;
-        height: 500px;
+        width: 600px;
+        height: 600px;
         border-radius: 10px;
     }
+}
 
+.smallText{
+    text-align: center;
+    font-weight: bold;
+    margin: 150px 0px 0px;
+}
+#companies{
+    display: flex;
+    margin: 30px 6px;
+    img{
+        width: 190px;
+        height: 125px;
+    }
+}
+
+#mySkills{
+    
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 5px;
+    
+
+    .skills{
+        width: 300px;
+        
+       padding: 25px;
+        text-align: center;
+        
+        p{
+            font-size: larger;
+            color: rgb(140, 140, 140);;
+        }
+        
+    }
+}
+
+.description{
+    padding: 0px 100px;
+    width: 600px;
+    color: rgb(140, 140, 140); 
+    font-size: x-large; 
+    margin: 15px auto 50px; 
+    text-align: center;
+}
+
+#projectBody{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    .project{
+        width: 240px;
+        padding: 10px;
+        margin-bottom: 30px;
+        img{
+            width: 240px;
+            padding: 10px;
+        }
+        a{
+            margin-left: 10px;
+            text-decoration: none;
+            color: black;
+            font-size: x-large;
+            font-weight: bold;
+        }
+        p{
+            margin-left: 10px;
+            color: rgb(140, 140, 140); 
+        }
+        button{
+            margin-left: 10px;
+            height: 33px;
+            width: 110px;
+            color: white;
+            background-color: rgb(26, 25, 25);
+            font-weight: 600;
+            border-radius: 10px;
+            border: 1px solid #000;
+        }
+        button:hover{
+            background-color: black;
+            box-shadow: #000;
+        }
+    }
+}
+
+#resume{
+    margin-top:150px;
+    display: flex;
+    gap: 300px;
+    #myResume{
+        
+        text-align: start;
+        color: black;
+    }
+
+    p{
+        width: 400px;
+        color:  rgb(140, 140, 140); 
+    }
+    button{
+        width: 100px;
+        height: 30px;
+        color: black;
+        background-color: white;
+        border: 0px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    button:hover{
+        background-color: rgb(237, 229, 229);
+    }
+
+    span{
+        color:  rgb(140, 140, 140); 
+    }
+
+    #degree{
+        div{
+            margin: 26px;
+        }
+    }
+    
+}
+#client{
+    margin: auto 100px;
+    display: flex;
+
+
+    #part1{
+        width: 500px;
+        h2{
+            width: 200px;
+            font-size: 200%;
+        }
+        p{
+            width: 400px;
+            color:  rgb(140, 140, 140); 
+        }
+        div{
+            font-weight: bold;
+        }
+        section{
+            margin-top: 10px;
+            font-size: small;
+            color:  rgb(140, 140, 140); 
+        }
+    }
+    img {
+        margin-left: 100px;
+        width: 300px;
+        height: 300px;
+    }
 }
