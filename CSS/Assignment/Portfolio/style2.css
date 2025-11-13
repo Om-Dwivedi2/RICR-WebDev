@@ -144,9 +144,30 @@
     .skills{
         width: 300px;
         
-       padding: 25px;
+        padding: 25px;
         text-align: center;
         
+        h2{
+            font-size:larger;
+        }
+
+        .icon2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            width: 50px;
+            height: 50px;
+            background-color: #212121;
+            border-radius: 100%;
+        }
+
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+        }
+
         p{
             font-size: larger;
             color: rgb(140, 140, 140);;
@@ -206,7 +227,7 @@
 #resume{
     margin:150px 0px 150px;
     display: flex;
-    gap: 300px;
+    gap: 100px;
     #myResume{
         
         text-align: start;
@@ -214,12 +235,14 @@
     }
 
     p{
-        width: 400px;
+        width: 450px;
+        font-size: larger;
         color:  rgb(140, 140, 140); 
     }
     button{
-        width: 200px;
-        height: 30px;
+        
+        width: 150px;
+        height: 40px;
         color: black;
         background-color: white;
         border: 0px;
@@ -230,14 +253,27 @@
         background-color: rgb(237, 229, 229);
     }
 
-    span{
-        color:  rgb(140, 140, 140); 
-    }
+    
 
     #degree{
         div{
-            margin: 26px;
+            display: flex;
+            margin: 10px 26px;
+            footer{
+                display: inline-block;
+                img{
+                    width: 55px;
+                    height: 55px;
+                    border-radius: 10px;
+                }
+            }
+            span{
+                font-size: 110%;
+                color: rgb(140, 140, 140); 
+                margin-left: 15px;
+            }
         }
+        
     }
     
 }
