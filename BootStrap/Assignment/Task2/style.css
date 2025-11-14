@@ -1,0 +1,28 @@
+#body{
+    font-family: sans-serif;
+}
+#part1{
+    width: 300px;
+    background-color: #354a5e;
+}
+
+#part2{
+    width: 400px;
+}
+img{
+    width: 200px;
+    height: 200px;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.heading{
+    font-size: larger;
+    color: white;
+    margin: auto;
+}
+.details{
+    font-size: small;
+}
