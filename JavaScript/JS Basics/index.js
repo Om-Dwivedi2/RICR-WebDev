@@ -8,8 +8,8 @@ console.log(a, b);
 
 let ar = ["abc", 123, 43.43];
 console.log(ar);
-console.warn("this is warning");
-console.error("ye error hai");
+// console.warn("this is warning");
+// console.error("ye error hai");
 
 // alert("this is alert");
 
