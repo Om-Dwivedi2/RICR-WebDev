@@ -2,7 +2,7 @@ function login() {
     console.log("Login Button Clicked");
 
     // const dala hai jisse hamara fetch kiya hua data koi change naa kar sake
-    // niche document 1 universal class hai JS ki jisme html ks code hota hai
+    // niche document 1 universal class hai JS ki jisme html ke code hota hai
     const om = document.getElementById("LoginEmail").value;
     const dev = document.getElementById("LoginPassword").value; 
     console.log("Login:- " + om);

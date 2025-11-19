@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EnquiryForm</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <footer style="position: sticky; top: 0px" class="fs-5 d-flex align-items-center px-5 py-1 bg-light">
+      <img
+        src="../EnquiryForm/asserts/logo-2.png"
+        class="p-3 "
+        style="width: 150px; height: 75px"
+        />
+      <div class="px-4">Home</div>
+      <div class="px-4">About</div>
+      <div class="px-4">Courses</div>
+      <div class="px-4">IDE</div>
+      <div class="px-4">Contact Us</div>
+
+      <label for="" style="padding-left: 100px" ><i class="bi bi-telephone"></i></label>
+      <div>
+        <a class="text-decoration-none text-black" href="tel:9229786134">+91 9229786134</a>
+      </div>
+      <button id="StudentLogin" class="text-decoration-none text-white p-2 border-0 bg-primary rounded-2 mx-4">Student Login</button>
+
+    </footer>
+
+    <div class="container bg-primary-subtle rounded-4 w-50 p-4 ">
+      <h1 class="text-center">Enquiry Form</h1>
+      <p class="text-center">
+        Have questions or need assistance? Fill out the form below to connect
+        with our team and explore your opportunities.
+      </p>
+
+
+      <div class="container my-5">
+        <div class="row my-4">
+          <div class="col">
+            <div><label for="Name" >Person Name*</label></div>
+            <input class="form-control h-75" type="text" name="Name" id="Name" placeholder="Person Name">
+          </div>
+
+          <div class="col">
+            <div><label for="Number">Contact Number*</label></div>
+            <input class=" form-control h-75" type="text" name="Number" id="Number" placeholder="Contact Number">
+          </div>
+        </div>
+
+        <div class="row my-4">
+          <div class="col-7">
+              <div><label for="Email">Email*</label></div>
+              <input class="form-control h-75"  type="email" name="Email" id="Email" placeholder="Email">
+          </div>
+
+          <div class="col-5">
+              <div><label for="Qualification">Qualification*</label></div>
+              <input class="form-control h-75"  type="email" name="Qualification" id="Qualification" placeholder="Qualification">
+          </div>
+        </div>
+
+        <div class="row ">
+          <div class="col">
+            <div><label for="College">College/School Name*</label></div>
+            <input class="form-control h-75 "  type="text" name="college" id="College" placeholder="College/School Name">
+          </div>
+        </div>
+
+        <div class="row my-4">
+          <div class="col-6">
+              <div><label for="Year">Year*</label></div>
+              <div class="form-control">
+                <select name="Year" id="Year" class="border-0 w-100">
+                  <option class="text-secondary">Year</option>
+                  <option value="First Year">First Year</option>
+                  <option value="Second Year">Second Year</option>
+                  <option value="Third Year">Third Year</option>
+                  <option value="fourth Year">Fourth Year</option>
+                  <option value="Passout">Passout</option>
+                </select>
+              </div>
+          </div>
+
+          <div class="col-6">
+              <div><label for="Branch">Branch*</label></div>
+              <input class="form-control h-75"  type="text" name="Branch" id="Branch" placeholder="Branch">
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col">
+            <div>Interested in Which Course*</div>
+            <input class="" type="checkbox" name="FS" id="FS">
+            <label class="d-inline" for="FS">Full Stack Web Development - Placement</label>
+
+            <div><input type="checkbox" name="DS" id="DS"></div>
+            <label class="d-inline" for="DS">Data Science with Python - Placement Oriented</label>
+
+            <div><input type="checkbox" name="DA" id="DA"></div>
+            <label class="d-inline" for="DA">Data Analytics with Python - Placement Oriented</label>
+
+            <div><input type="checkbox" name="BA" id="BA"></div>
+            <label class="d-inline" for="BA">Business Analyst</label>
+
+            <div><input type="checkbox" name="JP" id="JP"></div>
+            <label class="d-inline" for="JP">Java Programming/label>
+
+            <div><input type="checkbox" name="PP" id="PP"></div>
+            <label class="d-inline" for="PP">Python Programming</label>
+
+            <div><input type="checkbox" name="CP" id="CP"></div>
+            <label class="d-inline" for="CP">C/C++ Programming</label>
+
+            <div><input type="checkbox" name="Other" id="Other"></div>
+            <label class="d-inline" for="Other">Other</label>
+
+            
+          </div>
+
+          <div class="col">
+            <div>Source of Information</div>
+            <div class="fw-semibold">(Only choose 'Received call from institute' if you actually got a call from us)*</div>
+            
+            <div  class="form-control my-1">
+              <select name="Sources" id="Sources" class="border-0 w-100">
+                <option class="text-secondary" value="">Source of Information</option>
+                <option value="Media">Newspaper/Print Media</option>
+                <option value="Friends">Friends/Relatives</option>
+                <option value="SocialMedia">Social Media</option>
+                <option value="Workshop">Workshop/Seminar</option>
+                <option value="Institute">call form institute</option>
+                <option value="otherSources">others</option>
+              </select>
+            </div>
+
+            <div>Name of Executive*</div>
+            <div class="form-control my-1">
+              
+              <select name="Executive" id="Executive" class="border-0 w-100">
+                <option class="text-secondary" value="">Name of the Executive</option>
+                <option value="Om">Om</option>
+                <option value="Nayan">Nayan</option>
+                <option value="Dev">Dev</option>
+                <option value="Tanish">Tanish</option>
+                <option value="Amit">Amit</option>
+              </select>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+
+      <button id="Submit" class="text-white bg-black rounded-4 p-2 mx-4 border-0 justify-content-center" onclick="submit()">Submit</button>
+
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
