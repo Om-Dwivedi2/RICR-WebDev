@@ -13,10 +13,6 @@ function submit(){
     const executive = document.getElementById("Executive").value;
 
     
-
-
-
-
     console.log("Student's Name is :- "+ name);
     console.log("Contact Details:- "+ number);
     console.log("Email :- " + email);
@@ -27,8 +23,15 @@ function submit(){
     console.log("Sources :- " + source);
     console.log("Executive :- " + executive);
 
+    alert("Form Submited");
 
-
-    
-
+    document.getElementById("Name").value="";
+    document.getElementById("Number").value="";
+    document.getElementById("Email").value="";
+    document.getElementById("Qualification").value="";
+    document.getElementById("College").value="";
+    document.getElementById("Year").value="";
+    document.getElementById("Branch").value="";
+    document.getElementById("Sources").value="";
+    document.getElementById("Executive").value="";
 }

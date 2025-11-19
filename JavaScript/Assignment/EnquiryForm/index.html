@@ -12,7 +12,7 @@
     />
   </head>
   <body>
-    <footer style="position: sticky; top: 0px" class="fs-5 d-flex align-items-center px-5 py-1 bg-light">
+    <footer style="position: sticky; top: 0px" class="fs-5 d-flex align-items-center px-5 py-1 my-3 bg-white">
       <img
         src="../EnquiryForm/asserts/logo-2.png"
         class="p-3 "
@@ -24,15 +24,16 @@
       <div class="px-4">IDE</div>
       <div class="px-4">Contact Us</div>
 
-      <label for="" style="padding-left: 100px" ><i class="bi bi-telephone"></i></label>
+      
       <div>
+        <label style="padding-left: 100px" ><i class="bi bi-telephone"></i></label>
         <a class="text-decoration-none text-black" href="tel:9229786134">+91 9229786134</a>
       </div>
-      <button id="StudentLogin" class="text-decoration-none text-white p-2 border-0 bg-primary rounded-2 mx-4">Student Login</button>
+      <button id="StudentLogin" style="background-color: #0c547c;" class="text-decoration-none text-white p-2 border-0 rounded-3 mx-4">Student Login</button>
 
     </footer>
 
-    <div class="container bg-primary-subtle rounded-4 w-50 p-4 ">
+    <div style="background-color: #E0FFFF;" class="container rounded-4 w-75 p-4 ">
       <h1 class="text-center">Enquiry Form</h1>
       <p class="text-center">
         Have questions or need assistance? Fill out the form below to connect
@@ -49,7 +50,7 @@
 
           <div class="col">
             <div><label for="Number">Contact Number*</label></div>
-            <input class=" form-control h-75" type="text" name="Number" id="Number" placeholder="Contact Number">
+            <input class=" form-control h-75" type="number" name="Number" id="Number" placeholder="Contact Number">
           </div>
         </div>
 
@@ -98,28 +99,28 @@
           <div class="col">
             <div>Interested in Which Course*</div>
             <input class="" type="checkbox" name="FS" id="FS">
-            <label class="d-inline" for="FS">Full Stack Web Development - Placement</label>
+            <span for="FS">Full Stack Web Development - Placement</span>
 
             <div><input type="checkbox" name="DS" id="DS"></div>
-            <label class="d-inline" for="DS">Data Science with Python - Placement Oriented</label>
+            <span for="DS">Data Science with Python - Placement Oriented</span>
 
             <div><input type="checkbox" name="DA" id="DA"></div>
-            <label class="d-inline" for="DA">Data Analytics with Python - Placement Oriented</label>
+            <span for="DA">Data Analytics with Python - Placement Oriented</span>
 
             <div><input type="checkbox" name="BA" id="BA"></div>
-            <label class="d-inline" for="BA">Business Analyst</label>
+            <span for="BA">Business Analyst</span>
 
             <div><input type="checkbox" name="JP" id="JP"></div>
-            <label class="d-inline" for="JP">Java Programming/label>
+            <span for="JP">Java Programming</span>
 
             <div><input type="checkbox" name="PP" id="PP"></div>
-            <label class="d-inline" for="PP">Python Programming</label>
+            <span for="PP">Python Programming</span>
 
             <div><input type="checkbox" name="CP" id="CP"></div>
-            <label class="d-inline" for="CP">C/C++ Programming</label>
+            <span for="CP">C/C++ Programming</span>
 
             <div><input type="checkbox" name="Other" id="Other"></div>
-            <label class="d-inline" for="Other">Other</label>
+            <span for="Other">Other</span>
 
             
           </div>
@@ -159,7 +160,10 @@
 
       </div>
 
-      <button id="Submit" class="text-white bg-black rounded-4 p-2 mx-4 border-0 justify-content-center" onclick="submit()">Submit</button>
+      <div class="d-flex justify-content-center">
+        <button id="Submit" class="text-white bg-black rounded-4 p-2 border-0 w-25 h-25" onclick="submit()">Submit</button>
+      </div>
+
 
     </div>
 
