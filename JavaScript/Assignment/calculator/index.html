@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="background-color: #90e4f9">
+    <div class="container bg-black rounded-4 my-5 p-3" style="width: 400px">
+      <input
+        type="text"
+        value=""
+        placeholder="0"
+        class="container bg-white m-4 border-0 "
+        style="height: 60px; width: 325px"
+        id="display"
+      ></input>
+
+
+      <div class="container d-grid w-75 px-4">
+        <div class="row gap-3 my-1">
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="seven"
+            name="number"
+            onclick="Input('7')"
+          >
+            7
+          </button>
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="eight"
+            name="number"
+            onclick="Input('8')"
+          >
+            8
+          </button>
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="nine"
+            name="number"
+            onclick="Input('9')"
+          >
+            9
+          </button>
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="divide"
+            name="number"
+            onclick="Input('/')"
+          >
+            /
+          </button>
+        </div>
+
+        <div class="row gap-3 my-1">
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="four"
+            name="number"
+            onclick="Input('4')"
+          >
+            4
+          </button>
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="five"
+            name="number"
+            onclick="Input('5')"
+          >
+            5
+          </button>
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="six"
+            name="number"
+            onclick="Input('6')"
+          >
+            6
+          </button>
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="multiply"
+            name="number"
+            onclick="Input('*')"
+          >
+            *
+          </button>
+        </div>
+
+        <div class="row gap-3 my-1">
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="one"
+            name="number"
+            onclick="Input('1')"
+          >
+            1
+          </button>
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="two"
+            name="number"
+            onclick="Input('2')"
+          >
+            2
+          </button>
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="three"
+            name="number"
+            onclick="Input('3')"
+          >
+            3
+          </button>
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="minus"
+            name="number"
+            onclick="Input('-')"
+          >
+            -
+          </button>
+        </div>
+
+        <div class="row gap-3 my-1">
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="point"
+            name="number"
+            onclick="Input('.')"
+          >
+            .
+          </button>
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="zero"
+            name="number"
+            onclick="Input('0')"
+          >
+            0
+          </button>
+          <button
+            class="col-3 bg-light d-flex align-items-center justify-content-center fs-4 rounded-2 border-0"
+            style="width: 50px; height: 50px"
+            id="plus"
+            name="number"
+            onclick="Input('+')"
+          >
+            +
+          </button>
+          <button
+            class="col-3 bg-danger d-flex align-items-center justify-content-center fs-4 rounded-2 text-white border-0"
+            style="width: 50px; height: 50px"
+            id="cancel"
+            name="number"
+            onclick="Input('C')"
+          >
+            C
+          </button>
+        </div>
+
+        <div class="row gap-3 my-1">
+          <button
+            class="col-12 bg-danger d-flex align-items-center justify-content-center fs-4 rounded-2 text-white border-0"
+            style="height: 50px"
+            id="equal"
+            name="number"
+            onclick="Input('=')"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
