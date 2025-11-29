@@ -10,7 +10,7 @@ function submit() {
   document.querySelectorAll("input[name='batch']:checked").forEach((element) => {
       pb.push(element.value);
     });
-  const pt = document.querySelector("input[name='timing']:checked").value;
+  const pt = document.querySelector("input[name='timing']:checked");
   const ad = document.getElementById("address").value;
   const ct = document.getElementById("city").value;
   const pn = document.getElementById("pin").value;

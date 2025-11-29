@@ -1,7 +1,15 @@
 function Input(data){
 
   if(data === '='){
-    document.getElementById("display").value = eval(document.getElementById("display").value);
+    try{
+       document.getElementById("display").value = eval(document.getElementById("display").value);
+    }
+
+    catch(error){
+      alert("Invalid Statement");
+      document.getElementById("display").value = ""
+      
+    }
 
   }
 

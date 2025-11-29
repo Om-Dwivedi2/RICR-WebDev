@@ -1,4 +1,4 @@
-function submit{
+function submit(){
     const batch = document.querySelectorAll("input[name='batch']:checked");
     console.log(batch);
 
@@ -9,9 +9,7 @@ function submit{
     console.log(selectedBatchTiming);
 
 
-    const selectedBatch = document.querySelector(
-        "input[name = 'timing]:checked"
-    ).value;
+    const selectedBatch = document.querySelector("input[name = timing]:checked").value;
 
     console.log(selectedBatch);
 

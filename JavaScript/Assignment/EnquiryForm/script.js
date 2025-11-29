@@ -12,7 +12,10 @@ function submit(){
     const source = document.getElementById("Sources").value;
     const executive = document.getElementById("Executive").value;
 
-    
+    ar = [];
+    document.querySelectorAll("input[name = Course]:checked").forEach(element => {ar.push(element.value)});
+    console.log(ar)
+
     console.log("Student's Name is :- "+ name);
     console.log("Contact Details:- "+ number);
     console.log("Email :- " + email);
