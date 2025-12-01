@@ -11,14 +11,24 @@ function restart(){
 function roll1(){
 
     console.log("Player1 playing")
+    
     score = Number(document.getElementById("score1").innerText);
     // what is the use of Number.
+    
+    
     DF = Math.floor(Math.random()*6)+1;
 
     
         document.getElementById("image1").src = `../DiceGame/asserts/${DF}.png`
 
-    if(DF === 6){
+    if((score + DF) >= 100){
+        document.getElementById("roll1").disabled = true;
+        document.getElementById("roll2").disabled = true;
+        alert("Player 1 won");
+
+    }
+
+    else if(DF === 6){
         document.getElementById("roll1").disabled = true;
         document.getElementById("roll2").disabled = false;
     }
@@ -41,8 +51,14 @@ console.log("Player2 playing")
     DF = Math.floor(Math.random()*6)+1;    
     document.getElementById("image2").src = `../DiceGame/asserts/${DF}.png`
 
+    if((score + DF) >= 100){
+        document.getElementById("roll1").disabled = true;
+        document.getElementById("roll2").disabled = true;
+        alert("Player 2 won");
+
+    }
     
-    if(DF === 6){
+    else if(DF === 6){
         document.getElementById("roll2").disabled = true;
         document.getElementById("roll1").disabled = false;
     }
