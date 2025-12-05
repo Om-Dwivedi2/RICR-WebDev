@@ -23,7 +23,7 @@ function submit() {
   console.log("Score: " + sr);
   console.log("Course: " + cr);
   console.log("Preferred Batch: " + pb.join(", "));
-  console.log("Preferred Timing: " + pt);
+  console.log("Preferred Timing: " + pt.value);
   console.log("Address: " + ad);
   console.log("City: " + ct);
   console.log("Pin Code: " + pn);
