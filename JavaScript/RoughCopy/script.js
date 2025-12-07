@@ -1,34 +1,25 @@
-function submit() {
-  const fn = document.getElementById("fullName").value;
-  const em = document.getElementById("email").value;
-  const mb = document.getElementById("mobile").value;
-  const dob = document.getElementById("dob").value;
-  const ql = document.getElementById("qualification").value;
-  const sr = document.getElementById("score").value;
-  const cr = document.getElementById("course").value;
-  let pb = [];
-  document.querySelectorAll("input[name='batch']:checked").forEach((element) => {
-      pb.push(element.value);
+let om = document.getElementById("me");
+
+
+
+    
+    om.addEventListener("click" , () => {
+        console.log("hello");
+        if (om.textContent === "Click Me!") {
+            let b = document.createElement("button");
+            b.classList.add("m-5" , "ram");
+            b.innerText = "Om Dwivedi";
+            om.textContent = "Remove";
+
+            let body = document.querySelector("body");
+            body.appendChild(b);
+        }
+
+        else{
+            document.querySelector("body").removeChild(document.querySelector(".ram")); 
+            om.textContent = "Click Me!";
+        }
     });
-  const pt = document.querySelector("input[name='timing']:checked");
-  const ad = document.getElementById("address").value;
-  const ct = document.getElementById("city").value;
-  const pn = document.getElementById("pin").value;
 
-  console.log("Full Name: " + fn);
-  console.log("Email: " + em);
-  console.log("Mobile: " + mb);
-  console.log("Date of Birth: " + dob);
-  console.log("Qualification: " + ql);
-  console.log("Score: " + sr);
-  console.log("Course: " + cr);
-  console.log("Preferred Batch: " + pb.join(", "));
-  console.log("Preferred Timing: " + pt.value);
-  console.log("Address: " + ad);
-  console.log("City: " + ct);
-  console.log("Pin Code: " + pn);
-}
 
-function clearFrom() {
-  window.location.reload();
-}
+

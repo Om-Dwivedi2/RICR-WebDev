@@ -1,63 +1,92 @@
-function On(){
-    document.getElementById("bulb").style.backgroundColor = "yellow";
-}
-
-function Off(){
-    document.getElementById("bulb").style.backgroundColor = "white";
-    // yaha par jo hamne style likha isse hamare code me real time par inline CSS add ho raha hai jab bhi hum click karte hai
-}
-
-function Red(){
-    document.getElementById("bulb").style.backgroundColor = "red";
-}
-
-function Blue(){
-    document.getElementById("bulb").style.backgroundColor = "blue";
-}
-
-const userColor = document.getElementById("color");
-
-userColor.addEventListener('change' , ()=>changeBulbColor(userColor.value));
-
-function changeBulbColor(color){
-    document.getElementById("bulb").style.backgroundColor = color;
-}
-
-
-function SB_Control(){
-    const btn = document.getElementById("SB_btn");
-    if(btn.innerText === "On"){
-        document.getElementById("SB_btn").innerText = "Off";
-        document.getElementById("smartBulb").classList.add("on");
-        
-    }
-
-    else{
-        document.getElementById("SB_btn").innerText = "On";
-        document.getElementById("smartBulb").classList.remove("on");
-    }
-}
-
-
-function color(){
-    //document.getElementById("bulb").style.backgroundColor = document.getElementById("color").value;
-
-    document.getElementById('smartbulb').classList.toggle("on");
-
-
-}
-
-
 function change(rang)
 {
     document.getElementById("rainbow").style.backgroundColor = rang;
+}
+
+function change2(rang){
+    document.getElementById("rainbow").style.borderColor = rang;
 }
 
 document.getElementById("c1").addEventListener("mouseenter" , ()=>{
     change(document.getElementById("c1").style.backgroundColor)
 })
 
+document.getElementById("c1").addEventListener("mouseenter" , ()=>{
+    change2(document.getElementById("c1").style.backgroundColor)
+})
+
 document.getElementById("c1").addEventListener("mouseleave" , ()=>{
     change("white")
 })
 
+document.getElementById("c2").addEventListener("mouseenter" , ()=>{
+    change(document.getElementById("c2").style.backgroundColor)
+});
+
+document.getElementById("c2").addEventListener("mouseenter" , ()=>{
+    change2(document.getElementById("c2").style.backgroundColor)
+});
+
+document.getElementById("c2").addEventListener("mouseleave" , ()=>{
+    change("white")
+});
+
+document.getElementById("c3").addEventListener("mouseenter" , ()=>{
+    change(document.getElementById("c3").style.backgroundColor)
+});
+
+document.getElementById("c3").addEventListener("mouseenter" , ()=>{
+    change2(document.getElementById("c3").style.backgroundColor)
+});
+
+document.getElementById("c3").addEventListener("mouseleave" , ()=>{
+    change("white")
+});
+
+document.getElementById("c4").addEventListener("mouseenter" , ()=>{
+    change(document.getElementById("c4").style.backgroundColor)
+});
+
+document.getElementById("c4").addEventListener("mouseenter" , ()=>{
+    change2(document.getElementById("c4").style.backgroundColor)
+});
+
+document.getElementById("c4").addEventListener("mouseleave" , ()=>{
+    change("white")
+});
+
+document.getElementById("c5").addEventListener("mouseenter" , ()=>{
+    change(document.getElementById("c5").style.backgroundColor)
+});
+
+document.getElementById("c5").addEventListener("mouseenter" , ()=>{
+    change2(document.getElementById("c5").style.backgroundColor)
+});
+
+document.getElementById("c5").addEventListener("mouseleave" , ()=>{
+    change("white")
+});
+
+document.getElementById("c6").addEventListener("mouseenter" , ()=>{
+    change(document.getElementById("c6").style.backgroundColor)
+});
+
+document.getElementById("c6").addEventListener("mouseenter" , ()=>{
+    change2(document.getElementById("c6").style.backgroundColor)
+});
+
+document.getElementById("c6").addEventListener("mouseleave" , ()=>{
+    change("white")
+});
+
+document.getElementById("c7").addEventListener("mouseenter" , ()=>{
+    change(document.getElementById("c7").style.backgroundColor)
+});
+
+document.getElementById("c7").addEventListener("mouseenter" , ()=>{
+    change2(document.getElementById("c7").style.backgroundColor)
+});
+
+document.getElementById("c7").addEventListener("mouseleave" , ()=>{
+    change("white")
+});
