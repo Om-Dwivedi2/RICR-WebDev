@@ -1,0 +1,9 @@
+.om{
+    background-image: url(./asserts/banner-1.jpg);
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    
+    height: 600px;
+    width: 100%;
+}
