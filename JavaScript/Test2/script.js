@@ -8,9 +8,9 @@ function dev() {
 function om() {
   let s = document.getElementById("state").value.trim().toUpperCase();
   console.log(s);
-  let clickSound = document.getElementById("clickSound");
-  clickSound.currentTime = 0;
-  clickSound.play();
+  // let clickSound = document.getElementById("clickSound");
+  // clickSound.currentTime = 0;
+  // clickSound.play();
 
   let flag = document.createElement("i");
   flag.classList.add("bi", "bi-flag-fill", "position-absolute");
