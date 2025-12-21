@@ -9,11 +9,10 @@ function om() {
   let unit = document.getElementById("unit").value;
 
   if (Number(unit) <= 50) {
-    document.getElementById(
-      "bill"
-    ).innerHTML = `<div>First 50 units: <span class="float-end"> ${
-      Number(unit) * 0.5
-    }</span></div>
+    document.getElementById("bill").innerHTML = `
+        <div>First 50 units: <span class="float-end"> ${
+          Number(unit) * 0.5
+        }</span></div>
         <div>Next 150 units: <span class="float-end"> 0</span></div>
         <div>Next 250 units: <span class="float-end"> 0</span></div>
         <div>Above 450 units: <span class="float-end"> 0</span></div>
