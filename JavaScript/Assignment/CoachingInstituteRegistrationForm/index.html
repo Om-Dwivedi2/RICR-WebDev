@@ -28,33 +28,357 @@
         Coaching Institute Registration Form
       </header>
 
-      <div
-        class="container position-relative border border-black rounded-3"
+      <article
+        class="container position-relative border border-black rounded-3 px-2 py-4 my-4"
         style="width: 85%"
       >
+        <span
+          class="position-absolute bg-light text-primary px-2"
+          style="top: -15px; left: 30px"
+          >Personal Information</span
+        >
 
-        <span class="position-absolute bg-light  text-primary px-2" style="top: -15px; left: 30px;">Personal Information</span>
-        <div class="container w-75 my-3">
-          <label for="unit" class="fw-semibold mx-3"
-            >Enter distance travelled:</label
-          >
+        <section class="container d-flex my-4">
+          <label for="name" class="w-50">Full Name:</label>
           <input
-            type="number"
-            name="unit"
-            id="unit"
-            min="0"
-            class="form-control d-inline-block w-50"
+            type="text"
+            name="name"
+            id="name"
+            class="form-control position-relative"
           />
 
           <div
-            class="text-danger d-none"
-            id="warning"
-            style="font-size: smaller; margin-left: 210px"
+            class="text-danger position-absolute d-none"
+            id="warningName"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
           >
-            *Please enter a non-negative number of kilometres
+            *Please enter a valid name
           </div>
-        </div>
-      </div>
+        </section>
+
+        <section class="container d-flex my-4">
+          <label for="email" class="w-50">Email Address:</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="form-control position-relative"
+          />
+
+          <div
+            class="text-danger position-absolute d-none"
+            id="warningEmail"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
+          >
+            *Please enter a valid email address
+          </div>
+        </section>
+
+        <section class="container d-flex my-4">
+          <label for="number" class="w-50">Mobile Number:</label>
+          <input
+            type="number"
+            name="number"
+            id="number"
+            class="form-control position-relative"
+          />
+
+          <div
+            class="text-danger position-absolute d-none"
+            id="warningNumber"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
+          >
+            *Enter a 10-digit Indian mobile number
+          </div>
+        </section>
+
+        <section class="container d-flex my-4">
+          <label for="DOB" class="w-50">Date of Birth:</label>
+          <input
+            type="date"
+            name="DOB"
+            id="DOB"
+            class="form-control position-relative"
+          />
+
+          <div
+            class="text-danger position-absolute d-none"
+            id="warningDOB"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
+          >
+            *You must be at least 15 years old
+          </div>
+        </section>
+      </article>
+
+      <article
+        class="container position-relative border border-black rounded-3 px-2 py-4 my-4"
+        style="width: 85%"
+      >
+        <span
+          class="position-absolute bg-light text-primary px-2"
+          style="top: -15px; left: 30px"
+          >Academic Details</span
+        >
+
+        <section class="container d-flex my-4">
+          <label for="Qualification" class="w-50"
+            >Last Completed Qualification:</label
+          >
+
+          <select
+            name="Qualification"
+            id="Qualification"
+            class="form-control position-relative"
+          >
+            <option value="" selected disabled>
+              --Select a Qualification--
+            </option>
+            <option value="12">12th</option>
+            <option value="11">11th</option>
+            <option value="10">10th</option>
+            <option value="9">9th</option>
+          </select>
+
+          <div
+            class="text-danger position-absolute d-none"
+            id="warningQualification"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
+          >
+            *Please select a qualification
+          </div>
+        </section>
+
+        <section class="container d-flex my-4">
+          <label for="email" class="w-50">Percentage/Grade:</label>
+          <input
+            type="number"
+            name="Percentage"
+            id="Percentage"
+            min="0"
+            max="100"
+            class="form-control position-relative"
+          />
+
+          <div
+            class="text-danger position-absolute d-none"
+            id="warningPercentage"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
+          >
+            *Enter a valid percentage or grade
+          </div>
+        </section>
+      </article>
+
+      <article
+        class="container position-relative border border-black rounded-3 px-2 py-4 my-4"
+        style="width: 85%"
+      >
+        <span
+          class="position-absolute bg-light text-primary px-2"
+          style="top: -15px; left: 30px"
+          >Course Info</span
+        >
+
+        <section class="container d-flex my-4">
+          <label for="Course" class="w-50">Preferred Course:</label>
+
+          <select
+            name="Course"
+            id="Course"
+            class="form-control position-relative"
+          >
+            <option value="" selected disabled>--Select a course--</option>
+            <option value="JEE">IIT-JEE</option>
+            <option value="NEET">NEET</option>
+            <option value="CLAT">CLAT</option>
+            <option value="CUET">CUET</option>
+          </select>
+
+          <div
+            class="text-danger position-absolute d-none"
+            id="warningCourse"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
+          >
+            *Please Select a course
+          </div>
+        </section>
+
+        <section class="container d-flex my-4">
+          <label for="email" class="" style="width: 35%">Batch Timing:</label>
+          <div>
+            <input type="checkbox" name="batch" id="morning" value="morning" />
+            <label for="morning" class="m-2">Morning</label>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              name="batch"
+              id="afternoon"
+              value="afternoon"
+            />
+            <label for="afternoon" class="m-2">Afternoon</label>
+          </div>
+
+          <div>
+            <input type="checkbox" name="batch" id="evening" value="evening" />
+            <label for="evening" class="m-2">Evening</label>
+          </div>
+
+          <div
+            class="text-danger position-absolute d-nne"
+            id="warningPercentage"
+            style="font-size: smaller; margin-left: 255px; margin-top: 35px"
+          >
+            *Select a batch timing
+          </div>
+        </section>
+      </article>
+
+      <article
+        class="container position-relative border border-black rounded-3 px-2 py-4 my-4"
+        style="width: 85%"
+      >
+        <span
+          class="position-absolute bg-light text-primary px-2"
+          style="top: -15px; left: 30px"
+          >Address</span
+        >
+
+        <section class="container d-flex my-4">
+          <label for="Address" class="w-50">Residential Address:</label>
+          <input
+            type="text"
+            name="Address"
+            id="Address"
+            class="form-control position-relative"
+          />
+
+          <div
+            class="text-danger position-absolute d-none"
+            id="warningAddress"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
+          >
+            *Enter your full address
+          </div>
+        </section>
+
+        <section class="container d-flex my-4">
+          <label for="City" class="w-50">City:</label>
+          <input
+            type="text"
+            name="City"
+            id="City"
+            class="form-control position-relative"
+          />
+
+          <div
+            class="text-danger position-absolute d-none"
+            id="warningCity"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
+          >
+            *Please enter a valid city name
+          </div>
+        </section>
+
+        <section class="container d-flex my-4">
+          <label for="number" class="w-50">Pin Code:</label>
+          <input
+            type="number"
+            name="Pin"
+            id="Pin"
+            class="form-control position-relative"
+          />
+
+          <div
+            class="text-danger position-absolute d-none"
+            id="warningPin"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
+          >
+            *Enter a valid 6-digit pin code
+          </div>
+        </section>
+      </article>
+
+      <article
+        class="container position-relative border border-black rounded-3 px-2 py-4 my-4"
+        style="width: 85%"
+      >
+        <span
+          class="position-absolute bg-light text-primary px-2"
+          style="top: -15px; left: 30px"
+          >Guardian Details
+        </span>
+
+        <section class="container d-flex my-4">
+          <label for="GuardianName" class="w-50">Guardian’s Full Name:</label>
+          <input
+            type="text"
+            name="GuardianName"
+            id="GuardianName"
+            class="form-control position-relative"
+          />
+
+          <div
+            class="text-danger position-absolute d-none"
+            id="warningGuardianName"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
+          >
+            *Enter guardian's full name
+          </div>
+        </section>
+
+        <section class="container d-flex my-4">
+          <label for="GuadianNumber" class="w-50"
+            >Guardian’s Contact Number:</label
+          >
+          <input type="GuadianNumber" name="GuadianNumber" id=GuadianNumber"
+          class="form-control position-relative" />
+
+          <div
+            class="text-danger position-absolute d-none"
+            id="warningGuadianNumber"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
+          >
+            *Enter a valid 10-digit contact number
+          </div>
+        </section>
+      </article>
+
+      <article
+        class="container position-relative border border-black rounded-3 px-2 py-4 my-4"
+        style="width: 85%"
+      >
+        <span
+          class="position-absolute bg-light text-primary px-2"
+          style="top: -15px; left: 30px"
+          >Additional Info
+        </span>
+
+        <section class="container d-flex my-4">
+          <label for="Source" class="w-50">How did you hear about us?</label>
+
+          <select
+            name="Source"
+            id="Source"
+            class="form-control position-relative"
+          >
+            <option value="" selected disabled>--Select a Source--</option>
+            <option value="SocialMedia">Social Media</option>
+            <option value="Friends">Friends</option>
+            <option value="College">College</option>
+          </select>
+
+          <div
+            class="text-danger position-absolute d-none"
+            id="warningSource"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
+          >
+            *Please Select an option
+          </div>
+        </section>
+      </article>
     </main>
 
     <script
