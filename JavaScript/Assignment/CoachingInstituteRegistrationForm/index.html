@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coaching Institute Registration Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-primary">
+    <main
+      class="container shadow border border-1 w-75 my-5 rounded-4 d-flex flex-column bg-light-subtle"
+    >
+      <header
+        class="container text-center fs-3 fw-semibold bg-warning px-5 rounded-3 my-4"
+        style="width: 90%"
+      >
+        Coaching Institute Registration Form
+      </header>
+
+      <div
+        class="container position-relative border border-black rounded-3"
+        style="width: 85%"
+      >
+
+        <span class="position-absolute bg-light  text-primary px-2" style="top: -15px; left: 30px;">Personal Information</span>
+        <div class="container w-75 my-3">
+          <label for="unit" class="fw-semibold mx-3"
+            >Enter distance travelled:</label
+          >
+          <input
+            type="number"
+            name="unit"
+            id="unit"
+            min="0"
+            class="form-control d-inline-block w-50"
+          />
+
+          <div
+            class="text-danger d-none"
+            id="warning"
+            style="font-size: smaller; margin-left: 210px"
+          >
+            *Please enter a non-negative number of kilometres
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
