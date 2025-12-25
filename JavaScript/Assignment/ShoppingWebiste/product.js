@@ -20,7 +20,7 @@ async function getProducts() {
             <div class="h-50 border border-dark p-2">
               <div class="fw-semibold fs-4">${
                 element.title.length > 50
-                  ? element.title.slice(0, 45) + "..."
+                  ? element.title.slice(0, 35) + "..."
                   : element.title
               }</div>
               <div class="fw-semibold">${element.rating.rate}/5 (${
