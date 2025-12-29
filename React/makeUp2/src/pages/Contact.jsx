@@ -43,7 +43,7 @@ const Contact = () => {
 
       <form
         className="p-5 text-center"
-        onClear={handleClearForm}
+        onReset={handleClearForm}
         onSubmit={handleSubmitForm}
       >
         <div className="my-2">
@@ -88,11 +88,11 @@ const Contact = () => {
           ></textarea>
         </div>
         <div>
-          <button type="clear" className=" border-1 rounded mx-2 p-1">
+          <button type="reset" className=" border-1 rounded mx-2 p-1">
             Clear
           </button>
-          <button type="button" className=" border-1 rounded mx-2 p-1">
-            Submit
+          <button type="submit" className=" border-1 rounded mx-2 p-1">
+            {isLoading ? "Loading" : "Submit"}
           </button>
         </div>
       </form>

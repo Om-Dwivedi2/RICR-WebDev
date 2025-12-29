@@ -11,8 +11,9 @@ const Header = () => {
             <Link to={"/About"} className="text-decoration: none text-white" >About</Link>
             <Link to={"/Product"} className="text-decoration: none text-white" >Product</Link>
         </div>
-        <div>
-            <button className="">Login Now</button>
+        <div className="flex gap-4">
+            <Link to={"/Login"} className="text-decoration: none text-white">Login Now</Link>
+            <Link to={"/SignUp"} className="text-decoration: none text-white">Sign Up</Link>
         </div>
       </div>
     </>
