@@ -52,7 +52,7 @@ const Contact = () => {
           </label>
           <input
             required
-            className="border-1 text-fuchsia-700"
+            className="border text-fuchsia-700"
             type="text"
             name="fullName"
             id="fullName"
@@ -67,7 +67,7 @@ const Contact = () => {
           </label>
           <input
             required
-            className="border-1 "
+            className="border "
             type="email"
             name="email"
             id="email"
@@ -76,11 +76,26 @@ const Contact = () => {
           />
         </div>
         <div className="my-2">
+          <label htmlFor="email" className="w-20%">
+            Email:
+          </label>
+          <input
+            required
+            className="border "
+            type="email"
+            name="email"
+            id="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+        </div>
+
+        <div className="my-2">
           <label htmlFor="message" className="w-20%">
             Message
           </label>
           <textarea
-            className="border-1 "
+            className="border "
             name="message"
             id=""
             value={message}
@@ -88,10 +103,10 @@ const Contact = () => {
           ></textarea>
         </div>
         <div>
-          <button type="reset" className=" border-1 rounded mx-2 p-1">
+          <button type="reset" className=" border rounded mx-2 p-1">
             Clear
           </button>
-          <button type="submit" className=" border-1 rounded mx-2 p-1">
+          <button type="submit" className=" border rounded mx-2 p-1">
             {isLoading ? "Loading" : "Submit"}
           </button>
         </div>
