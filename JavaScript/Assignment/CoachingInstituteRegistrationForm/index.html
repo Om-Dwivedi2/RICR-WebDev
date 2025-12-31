@@ -48,9 +48,9 @@
           />
 
           <div
-            class="text-danger position-absolute d-none"
+            class="text-danger position-absolute d-none xyz"
             id="warningName"
-            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px "
           >
             *Please enter a valid name
           </div>
@@ -66,7 +66,7 @@
           />
 
           <div
-            class="text-danger position-absolute d-none"
+            class="text-danger position-absolute d-none xyz"
             id="warningEmail"
             style="font-size: smaller; margin-left: 250px; margin-top: 40px"
           >
@@ -84,7 +84,7 @@
           />
 
           <div
-            class="text-danger position-absolute d-none"
+            class="text-danger position-absolute d-none xyz"
             id="warningNumber"
             style="font-size: smaller; margin-left: 250px; margin-top: 40px"
           >
@@ -102,7 +102,7 @@
           />
 
           <div
-            class="text-danger position-absolute d-none"
+            class="text-danger position-absolute d-none xyz"
             id="warningDOB"
             style="font-size: smaller; margin-left: 250px; margin-top: 40px"
           >
@@ -123,7 +123,7 @@
 
         <section class="container d-flex my-4">
           <label for="Qualification" class="w-50"
-            >Last Completed Qualification:</label
+            >Last Cxyzpleted Qualification:</label
           >
 
           <select
@@ -141,7 +141,7 @@
           </select>
 
           <div
-            class="text-danger position-absolute d-none"
+            class="text-danger position-absolute d-none xyz"
             id="warningQualification"
             style="font-size: smaller; margin-left: 250px; margin-top: 40px"
           >
@@ -161,7 +161,7 @@
           />
 
           <div
-            class="text-danger position-absolute d-none"
+            class="text-danger position-absolute d-none xyz"
             id="warningPercentage"
             style="font-size: smaller; margin-left: 250px; margin-top: 40px"
           >
@@ -196,7 +196,7 @@
           </select>
 
           <div
-            class="text-danger position-absolute d-none"
+            class="text-danger position-absolute d-none xyz"
             id="warningCourse"
             style="font-size: smaller; margin-left: 250px; margin-top: 40px"
           >
@@ -227,8 +227,8 @@
           </div>
 
           <div
-            class="text-danger position-absolute d-nne"
-            id="warningPercentage"
+            class="text-danger position-absolute d-none xyz"
+            id="warningBatch"
             style="font-size: smaller; margin-left: 255px; margin-top: 35px"
           >
             *Select a batch timing
@@ -256,7 +256,7 @@
           />
 
           <div
-            class="text-danger position-absolute d-none"
+            class="text-danger position-absolute d-none xyz"
             id="warningAddress"
             style="font-size: smaller; margin-left: 250px; margin-top: 40px"
           >
@@ -274,7 +274,7 @@
           />
 
           <div
-            class="text-danger position-absolute d-none"
+            class="text-danger position-absolute d-none xyz"
             id="warningCity"
             style="font-size: smaller; margin-left: 250px; margin-top: 40px"
           >
@@ -292,7 +292,7 @@
           />
 
           <div
-            class="text-danger position-absolute d-none"
+            class="text-danger position-absolute d-none xyz"
             id="warningPin"
             style="font-size: smaller; margin-left: 250px; margin-top: 40px"
           >
@@ -312,16 +312,16 @@
         </span>
 
         <section class="container d-flex my-4">
-          <label for="GuardianName" class="w-50">Guardian’s Full Name:</label>
+          <label for="GuadianName" class="w-50">Guardian’s Full Name:</label>
           <input
             type="text"
-            name="GuardianName"
-            id="GuardianName"
+            name="GuadianName"
+            id="GuadianName"
             class="form-control position-relative"
           />
 
           <div
-            class="text-danger position-absolute d-none"
+            class="text-danger position-absolute d-none xyz"
             id="warningGuardianName"
             style="font-size: smaller; margin-left: 250px; margin-top: 40px"
           >
@@ -333,13 +333,13 @@
           <label for="GuadianNumber" class="w-50"
             >Guardian’s Contact Number:</label
           >
-          <input type="GuadianNumber" name="GuadianNumber" id=GuadianNumber"
+          <input type="number" name="GuadianNumber" id="GuadianNumber"
           class="form-control position-relative" />
 
           <div
-            class="text-danger position-absolute d-none"
+            class="text-danger position-absolute d-none xyz"
             id="warningGuadianNumber"
-            style="font-size: smaller; margin-left: 250px; margin-top: 40px"
+            style="font-size: smaller; margin-left: 250px; margin-top: 40px "
           >
             *Enter a valid 10-digit contact number
           </div>
@@ -371,7 +371,7 @@
           </select>
 
           <div
-            class="text-danger position-absolute d-none"
+            class="text-danger position-absolute d-none xyz"
             id="warningSource"
             style="font-size: smaller; margin-left: 250px; margin-top: 40px"
           >
@@ -380,8 +380,13 @@
         </section>
       </article>
 
-      <button class="btn btn-outline-success container w-25 my-4" id="submit">Submit</button>
-
+      <button
+        class="btn btn-outline-success container w-25 my-4"
+        onclick="Go()"
+        id="submit"
+      >
+        Submit
+      </button>
     </main>
 
     <script
