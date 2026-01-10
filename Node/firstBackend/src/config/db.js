@@ -18,6 +18,7 @@ const connectDB = async ()=> {
         process.exit(1);
         
     }
+    // Adarsh Gupta
 }
 
 export default connectDB;
