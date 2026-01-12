@@ -1,9 +1,31 @@
-import fs from "fs"
-import http from 'http'
+import express from "express";
 
-http.createServer((req, res)=>{
-    res.end("hello duniya")
-})
+const app = express();
 
-Server.listen.port(1);
+// tarika 1
+// app.use((req, res, next)=>{
 
+//     console.log("Ye middleware me agaye hai");
+
+//     next();
+// })
+
+// app.get("/", (req, res) =>{
+//     res.send("hel");
+
+// });
+
+// tarika 2
+
+app.get(
+  "/",
+  (req, res, next) => {
+    console.log("WE ARE AT MIDDLEWARE");
+    next();
+  },
+  (req, res) => {
+    res.send("Hello World")
+  }
+);
+
+app.listen(3000);
