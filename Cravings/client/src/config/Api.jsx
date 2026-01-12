@@ -4,4 +4,4 @@ const axiosInstance = axios.create({
   baseURL: "http://locslhost:4500"
 });
 
-export default axios 
+export default axiosInstance; 
