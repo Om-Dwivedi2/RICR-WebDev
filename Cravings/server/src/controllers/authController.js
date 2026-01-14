@@ -14,7 +14,7 @@ export const UserRegister = async (req, res, next) => {
     }
 
     // Check for duplicate user before registration
-    const existingUser = await User.findOne([email]);
+    const existingUser = await User.findOne({email});
     if (existingUser) {
       const error = new Error("Email already registered");
       error.statusCode = 409;
@@ -37,7 +37,7 @@ export const UserRegister = async (req, res, next) => {
 
     // send response to frontend
     console.log(newUser);
-    res.statusCode(201).json({ message: "Registration Successfull" });
+    res.status(201).json({ message: "Registration Successfull" });
 
     // End
   } catch (error) {
@@ -58,10 +58,10 @@ export const UserLogin = async (req, res, next) => {
     }
 
     // Check for duplicate user before registration
-    const existingUser = await User.findOne([email]);
+    const existingUser = await User.findOne({email});
     if (!existingUser) {
       const error = new Error("Email not registered");
-      error.statusCode = 402;
+      error.statusCode = 401;
       return next(error);
     }
 
@@ -69,7 +69,7 @@ export const UserLogin = async (req, res, next) => {
     const isVerified = await bcrypt.compare(password, existingUser.password);
     if (!isVerified) {
       const error = new Error("Password didn't match");
-      error.statusCode = 402;
+      error.statusCode = 401;
       return next(error);
     }
 

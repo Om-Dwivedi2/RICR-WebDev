@@ -56,7 +56,7 @@ const Register = () => {
     return Object.keys(Error).length > 0 ? false : true;
   };
 
-  const handleSubmit =async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
 
@@ -67,7 +67,7 @@ const Register = () => {
     }
 
     try {
-      const res = await api.post("/auth/register",formData)
+      const res = await api.post("/auth/register", formData);
       toast.success(res.data.message);
       handleClearForm();
     } catch (error) {
@@ -110,7 +110,7 @@ const Register = () => {
                       value={formData.fullName}
                       onChange={handleChange}
                       required
-                      disabled = {isLoading}
+                      disabled={isLoading}
                       className="w-full h-fit px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition"
                     />
                     {validationError.fullName && (
@@ -126,7 +126,7 @@ const Register = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    disabled = {isLoading}
+                    disabled={isLoading}
                     className="w-full h-fit px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition"
                   />
                   <input
@@ -137,7 +137,7 @@ const Register = () => {
                     value={formData.mobileNumber}
                     onChange={handleChange}
                     required
-                    disabled = {isLoading}
+                    disabled={isLoading}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition"
                   />
                   <input
@@ -147,7 +147,7 @@ const Register = () => {
                     placeholder="Create Password"
                     onChange={handleChange}
                     required
-                    disabled = {isLoading}
+                    disabled={isLoading}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition"
                   />
                   <input
@@ -157,7 +157,7 @@ const Register = () => {
                     value={formData.confirmPassword}
                     onChange={handleChange}
                     required
-                    disabled = {isLoading}
+                    disabled={isLoading}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition"
                   />
                 </div>
@@ -175,7 +175,7 @@ const Register = () => {
                   type="submit"
                   className="flex-1 bg-linear-to-r from-indigo-600 to-indigo-700 text-white font-bold py-4 px-6 rounded-lg hover:from-indigo-700 hover:to-indigo-800 transition duration-300 transform hover:scale-105 shadow-lg"
                 >
-                  {isLoading? "Submitting" : "Submit"}
+                  {isLoading ? "Submitting" : "Submit"}
                 </button>
               </div>
             </form>

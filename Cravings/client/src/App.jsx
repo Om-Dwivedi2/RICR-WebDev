@@ -9,6 +9,9 @@ import Login from "./pages/Login";
 import { Toaster } from "react-hot-toast";
 
 const App = () => {
+
+
+  
   return (
     <>  
       <BrowserRouter>
@@ -21,6 +24,8 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          
+
         </Routes>
       </BrowserRouter>
     </>
