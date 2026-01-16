@@ -27,7 +27,7 @@ export const UserRegister = async (req, res, next) => {
     const hashedPassword = await bcrypt.hash(password, salt);
 
     // save data to database
-
+ 
     const newUser = await User.create({
       fullName,
       email,

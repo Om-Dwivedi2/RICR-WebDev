@@ -15,12 +15,3 @@ const userSchema = mongoose.Schema({
 const om = mongoose.model("user", userSchema);
 
 export default om;
-
-
-
-
-
-
-
-
-
