@@ -1,8 +1,10 @@
 import React from "react";
 import tranparentLogo from "../assets/transparentLogo.png";
 import { Link, useNavigate } from "react-router-dom";
-
+import { useAuth } from "../context/authContext";
 const Header = () => {
+
+  const {user, isLogin} = useAuth();
   const navigate = useNavigate();
 
   return (
@@ -36,7 +38,10 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex gap-4">
-          <button
+          {isLogin ? (<span className="text-red-600">{user.fullName}</span>)
+          :
+          <>
+          (<button
             onClick={() => navigate("/login")}
             className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded "
           >
@@ -47,7 +52,8 @@ const Header = () => {
             className="bg-(--color-secondary) py-2 px-4 font-bold hover:bg-(--color-secondary-hover) hover:text-white rounded "
           >
             Register
-          </button>
+          </button>)
+          </>}
         </div>
       </div>
     </>

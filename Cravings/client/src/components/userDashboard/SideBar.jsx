@@ -6,26 +6,40 @@ import { TbPigMoney } from "react-icons/tb";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaHandsHelping } from "react-icons/fa";
 
-const SideBar = ({ active, setActive }) => {
+const SideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
+  const items = [
+    { setActive: "overview", content: "Overview" },
+    { setActive: "profile", content: "Profile" },
+    { setActive: "order", content: "Order" },
+    { setActive: "transaction", content: "Transaction" },
+    { setActive: "helpDesk", content: "HelpDesk" },
+  ];
+
   return (
     <>
       <div className="p-3 ">
         <div className="text-xl font-bold flex gap-3">
-          <button><GiHamburgerMenu/></button>
-          <span>User Dashboard</span>
+          <button
+            onClick={() => {
+              setIsCollapsed(!isCollapsed);
+            }}
+          >
+            <GiHamburgerMenu />
+          </button>
+          <span>{!isCollapsed ? "User Dashboard" : " "}</span>
         </div>
       </div>
       <hr />
-      <div className="grid gap-3 bg-cyan-300 px-5 py-4">
+      <div className="grid gap-3 bg-cyan-300 px-1 py-4">
         <button
-          className={`flex gap-3 items-center hover:bg-gray-100/70 p-3 rounded-xl ${
+          className={`flex gap-3 duration-300 items-center hover:bg-gray-100/70 p-3 rounded-xl ${!isCollapsed ? "w-100/100" : "w-30/100"} ${
             active === "overview"
               ? "bg-(--color-secondary) text-white"
               : "hover:bg-gray-100/70"
           }`}
           onClick={() => setActive("overview")}
         >
-          <FaMagnifyingGlassChart /> Overview
+          <FaMagnifyingGlassChart /> {!isCollapsed ? "Overview" : ""}
         </button>
         <button
           className={`flex gap-3 items-center hover:bg-gray-100/70 p-3 rounded-xl ${
@@ -36,7 +50,7 @@ const SideBar = ({ active, setActive }) => {
           onClick={() => setActive("profile")}
         >
           <ImProfile /> Profile
-        </button >
+        </button>
         <button
           className={`flex gap-3  hover:bg-gray-100/70 p-3 rounded-xl ${
             active === "order"

@@ -12,7 +12,7 @@ const UserDashboard = () => {
   return (
     <>
       <div className=" w-full h-[90vh] flex">
-        <div className="border border-green-500 w-2/10">
+        <div className={`border border-green-500 duration-300 ${isCollapsed ? "w-3/60" : "w-12/60" }`}>
           {/* HTML me bataya gaya tha tag is like function so here sidebar is like function with parameter (active, setActive) */}
 
           <SideBar
@@ -22,7 +22,7 @@ const UserDashboard = () => {
             setIsCollapsed={setIsCollapsed}
           />
         </div>
-        <div className="border border-amber-700 w-8/10">
+        <div className={`border border-amber-700 ${isCollapsed ? "w-57/60" : "w-48/60"}`}>
           {active === "overview" && <UserOverview />}
           {active === "profile" && <UserProfile />}
           {active === "order" && <UserOrder />}

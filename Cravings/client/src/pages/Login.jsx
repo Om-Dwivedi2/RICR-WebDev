@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 import api from "../config/Api";
 import { Navigate, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/authContext";
 
 const Login = () => {
-  const navigate = useNavigate(); 
+  const { setUser, setIsLogin } = useAuth();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -29,12 +31,11 @@ const Login = () => {
 
     if (
       !/^[\w\.]+@(gmail|outlook|ricr|yahoo)\.(com|in|co.in)$/.test(
-        formData.email
+        formData.email,
       )
     ) {
       Error.email = "Use Proper Email Format";
     }
-
 
     return Object.keys(Error).length > 0 ? false : true;
   };
@@ -52,8 +53,11 @@ const Login = () => {
     try {
       const res = await api.post("/auth/login", formData);
       toast.success(res.data.message);
+      setUser(res.data.data);
+      setIsLogin(true);
+      sessionStorage.aetItem("CravingUser", JSON.stringify(res.data.data));
       handleClearForm();
-      navigate("/user-dashboard")
+      navigate("/user-dashboard");
     } catch (error) {
       console.log(error);
       toast.error(error.message);
@@ -68,9 +72,7 @@ const Login = () => {
         <div className="max-w-xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">
-              Login
-            </h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">Login</h1>
             <p className="text-lg text-gray-600">
               You are 1 step away to stop your Cavings
             </p>
