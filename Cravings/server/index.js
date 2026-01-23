@@ -6,6 +6,8 @@ import cors from "cors";
 import connectDB from "./src/config/db.js";
 import AuthRouter from "./src/routers/authRouter.js";
 import PublicRouter from "./src/routers/pubicRouter.js"
+import UserRouter from "./src/routers/userRouter.js"
+import cookieParser from "cookie-parser";
 import morgan from 'morgan';
 
 const app = express();
@@ -19,8 +21,8 @@ app.use(morgan("dev"));
 
 //Mera backend /auth se start hone wali saari requests ko AuthRouter ko handle karne dega.
 app.use("/auth", AuthRouter);
-
 app.use("/public" , PublicRouter)
+app.use("/user" , UserRouter);
 
 
 
