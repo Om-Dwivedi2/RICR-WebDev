@@ -25,20 +25,18 @@ const EditProfileModal = ({ onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("From Submitted");
-    
+
     try {
-      const res = await api.put("/user")
-
-
-
+      const res = await api.put("/user/update", formData);
+      sessionStorage.setItem("CravingUser", JSON.stringify(res.data.data));
+      setUser(res.data.data);
+      setIsLogin(true);
+      // sessionStorage.setItem("CravingUser", JSON.stringify(res.data.data));
     } catch (error) {
-      
+      console.log(error);
+    } finally {
+      onClose();
     }
-    
-
-
-
-
   };
 
   return (
@@ -95,7 +93,7 @@ const EditProfileModal = ({ onClose }) => {
           </form>
 
           <button
-            className="absolute right-0 top-0 bg-red-500 h-6 w-6 flex items-center justify-center"
+            className="absolute right-0 top-0 bg-red-500 h-6 w-6 flex items-center justify-center text-white"
             onClick={() => onClose()}
           >
             {" "}

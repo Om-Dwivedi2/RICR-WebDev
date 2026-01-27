@@ -2,7 +2,7 @@
 // so isme JWT ki processing hogi
 
 import jwt from "jsonwebtoken";
-import User from "../models/userModel";
+import User from "../models/userModel.js";
 
 export const Protect = async (req, res, next) => {
   try {

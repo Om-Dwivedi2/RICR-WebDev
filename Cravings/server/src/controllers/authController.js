@@ -5,10 +5,10 @@ import { getToken } from "../utils/authToken.js";
 export const UserRegister = async (req, res, next) => {
   try {
     // accept data from frontend
-    const { fullName, email, mobileNumber, password } = req.body;
+    const { fullName, email, mobileNumber, password, role } = req.body;
 
     // verify that all data exist
-    if (!fullName || !email || !mobileNumber || !password) {
+    if (!fullName || !email || !mobileNumber || !password || !role) {
       const error = new Error("All feilds required");
       error.statusCode = 400;
       return next(error);
@@ -27,6 +27,13 @@ export const UserRegister = async (req, res, next) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
+
+    const photoURL = `https://placehold.co/600x400?text=${fullName.charAt(0).toUpperCase()}`;
+    const photo = {
+      url : photoURL,
+    };
+
+
     // save data to database
  
     const newUser = await User.create({
@@ -34,6 +41,7 @@ export const UserRegister = async (req, res, next) => {
       email,
       mobileNumber,
       password: hashedPassword,
+      role,
     });
 
     // send response to frontend

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SideBar from "../../components/userDashboard/SideBar";
+import UserSideBar from "../../components/userDashboard/UserSideBar";
 import UserOverview from "../../components/userDashboard/UserOverview";
 import UserProfile from "../../components/userDashboard/UserProfile";
 import UserOrder from "../../components/userDashboard/UserOrder";
@@ -13,9 +13,9 @@ const UserDashboard = () => {
     <>
       <div className=" w-full h-[90vh] flex">
         <div className={`border border-green-500 duration-300 ${isCollapsed ? "w-3/60" : "w-12/60" }`}>
-          {/* HTML me bataya gaya tha tag is like function so here sidebar is like function with parameter (active, setActive) */}
+          {/* HTML me bataya gaya tha tag is like function so here UserSideBar is like function with parameter (active, setActive) */}
 
-          <SideBar
+          <UserSideBar
             active={active}
             setActive={setActive}
             isCollapsed={isCollapsed}

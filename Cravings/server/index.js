@@ -1,6 +1,4 @@
-import dotenv from "dotenv";
-dotenv.config();
-
+import cloudinary from "../server/src/config/cloudinary.js"
 import express from "express";
 import cors from "cors";
 import connectDB from "./src/config/db.js";
@@ -17,6 +15,7 @@ const app = express();
 // Mera backend sirf localhost:5173 se aane wali browser requests ko allow kare
 app.use(cors({ origin: "http://localhost:5173", credentials: true }));   
 app.use(express.json());
+app.use(cookieParser());
 app.use(morgan("dev"));
 
 //Mera backend /auth se start hone wali saari requests ko AuthRouter ko handle karne dega.
@@ -38,7 +37,18 @@ app.use((err, req, res, next) => {
 });
 
 const port = process.env.PORT || 5000;
-app.listen(port, () => {
+app.listen(port, async () => {
   console.log("Server Started at Port: ", port);
   connectDB();
+
+  try {
+    const res = await cloudinary.api.ping();
+    console.log("Cloudinary API is Working:-", res);
+  } catch (error) {
+    console.log("Error Connecting Cloudinary ");
+    
+    
+
+  }
+
 });

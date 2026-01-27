@@ -4,9 +4,16 @@ const UserOverview = () => {
   return (
     <>
         <div>
-          Hello can you hear me 
+          <div>
+            <div><img src="" alt="" /></div>
+            <div>
+              <div>Om Dwivedi</div>
+              <div>Gmail</div>
+              <div>Phone</div>
+            </div>
+          </div>
+          <div></div>
         </div>
-    
     </>
   )
 }

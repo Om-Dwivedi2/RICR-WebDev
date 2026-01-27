@@ -5,9 +5,14 @@ import { FaCartShopping } from "react-icons/fa6";
 import { TbPigMoney } from "react-icons/tb";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaHandsHelping } from "react-icons/fa";
+import { MdLogout } from "react-icons/md";
+import api from "../../config/Api";
+import toast from "react-hot-toast";
+import { useAuth } from "../../context/authContext";
 
-const SideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
-  
+const UserSideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
+  const { setUser, setIsLogin } = useAuth();
+
   const menuItems = [
     { key: "overview", title: "OverView", icon: <FaMagnifyingGlassChart /> },
     { key: "profile", title: "Profile", icon: <ImProfile /> },
@@ -20,6 +25,7 @@ const SideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
     { key: "helpdesk", title: "Help Desk", icon: <FaHandsHelping /> },
   ];
 
+  // Om Ka Code
   // const items = [
   //   { setActive: "overview", content: "Overview" },
   //   { setActive: "profile", content: "Profile" },
@@ -28,9 +34,20 @@ const SideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
   //   { setActive: "helpDesk", content: "HelpDesk" },
   // ];
 
+  const handleLogout = async () => {
+    try {
+      const res = await api.get("/auth/logout");
+      toast.success(res.data.message);
+      setUser("");
+      setIsLogin(false);
+      sessionStorage.removeItem("CravingUser");
+    } catch (error) {
+      toast.error(error?.response?.data?.message || "Unknown Error");
+    }
+  };
+
   return (
     <>
-      
       <div className="p-2">
         <div className="h-10 text-xl font-bold flex gap-5 items-center mb-3">
           <button
@@ -65,8 +82,7 @@ const SideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
           ))}
         </div>
       </div>
-      
-      
+
       {/* <div className="p-3 ">
         <div className="text-xl font-bold flex gap-3">
           <button
@@ -136,4 +152,4 @@ const SideBar = ({ active, setActive, isCollapsed, setIsCollapsed }) => {
   );
 };
 
-export default SideBar;
+export default UserSideBar;

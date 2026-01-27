@@ -9,12 +9,14 @@ const Register = () => {
     mobileNumber: "",
     password: "",
     confirmPassword: "",
+    role: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [validationError, setValidationError] = useState({});
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type } = e.target;
+    
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -25,6 +27,7 @@ const Register = () => {
       mobileNumber: "",
       password: "",
       confirmPassword: "",
+      role: "",
     });
   };
 
@@ -41,7 +44,7 @@ const Register = () => {
 
     if (
       !/^[\w\.]+@(gmail|outlook|ricr|yahoo)\.(com|in|co.in)$/.test(
-        formData.email
+        formData.email,
       )
     ) {
       Error.email = "Use Proper Email Format";
@@ -49,6 +52,10 @@ const Register = () => {
 
     if (!/^[6-9]\d{9}$/.test(formData.mobileNumber)) {
       Error.mobileNumber = "Only Indian Mobile Number allowed";
+    }
+
+    if (!formData.role) {           
+      Error.role = "Plese Choose anyone";
     }
 
     setValidationError(Error);
@@ -102,6 +109,45 @@ const Register = () => {
               {/* Personal Information */}
               <div className="mb-10">
                 <div className="space-y-4">
+                  <div>
+                    <div>
+                      <input
+                        type="radio"
+                        name="role"
+                        id="manager"
+                        checked={formData.role === "manager"}
+                        value={"manager"}
+                        onChange={handleChange}
+                      />
+                      <label htmlFor="manager">Restaurant Manager</label>
+                    </div>
+
+                    <div>
+                      <input
+                        type="radio"
+                        name="role"
+                        id="partner"
+                        checked={formData.role === "partner"}
+                        value={"partner"}
+                        onChange={handleChange}
+                      />
+                      <label htmlFor="partner">Restaurant Partner</label>
+                    </div>
+
+                    <div>
+                      <input
+                        type="radio"
+                        name="role"
+                        id="customer"
+                        checked={formData.role === "customer"}
+                        value={"customer"}
+                        onChange={handleChange}
+                      />
+                      <label htmlFor="customer">Restaurant Customer</label>
+                    </div>
+
+                  </div>
+
                   <div>
                     <input
                       type="text"
