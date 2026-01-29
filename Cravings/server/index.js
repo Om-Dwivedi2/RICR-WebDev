@@ -45,10 +45,7 @@ app.listen(port, async () => {
     const res = await cloudinary.api.ping();
     console.log("Cloudinary API is Working:-", res);
   } catch (error) {
-    console.log("Error Connecting Cloudinary ");
-    
-    
-
+    console.log("Error Connecting Cloudinary API : ", error);
+  
   }
-
 });

@@ -15,7 +15,7 @@ export const UserRegister = async (req, res, next) => {
     }
 
     // Check for duplicate user before registration
-    const existingUser = await User.findOne({email});
+    const existingUser = await User.findOne({ email });
     if (existingUser) {
       const error = new Error("Email already registered");
       error.statusCode = 409;
@@ -27,21 +27,22 @@ export const UserRegister = async (req, res, next) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
+    console.log("Password Hashing Done. hashPassword = ", hashPassword);
 
     const photoURL = `https://placehold.co/600x400?text=${fullName.charAt(0).toUpperCase()}`;
     const photo = {
-      url : photoURL,
+      url: photoURL,
     };
 
-
     // save data to database
- 
+
     const newUser = await User.create({
       fullName,
-      email,
+      email: email.toLowerCase(),
       mobileNumber,
       password: hashedPassword,
       role,
+      photo,
     });
 
     // send response to frontend
@@ -67,7 +68,7 @@ export const UserLogin = async (req, res, next) => {
     }
 
     // Check for duplicate user before registration
-    const existingUser = await User.findOne({email});
+    const existingUser = await User.findOne({ email });
     if (!existingUser) {
       const error = new Error("Email not registered");
       error.statusCode = 401;
@@ -82,15 +83,13 @@ export const UserLogin = async (req, res, next) => {
       return next(error);
     }
 
-    // Token 
+    // Token
     await getToken(existingUser, res);
-
 
     // send message to Frontend
     res.status(200).json({ message: "Login Successfull", data: existingUser });
 
-    // End 
-
+    // End
   } catch (error) {
     next(error);
   }
@@ -98,11 +97,9 @@ export const UserLogin = async (req, res, next) => {
 
 export const UserLogout = async (req, res, next) => {
   try {
-    res.status(200).json({ message: "Logout Successfull"});
-
+    res.clearCookie("parleG");
+    res.status(200).json({ message: "Logout Successfull" });
   } catch (error) {
     next(error);
   }
 };
-
-
