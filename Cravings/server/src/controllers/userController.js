@@ -71,6 +71,9 @@ export const UserChangePhoto = async (req, res, next) => {
     const dataURI = `data:${dp.mimetype};base64,${b64}`;
     console.log("DataURI", dataURI.slice(0, 100));
 
+
+    //  clodinary se jo mila vo result me store kar diya like publicID, secure URL
+
     const result = await cloudinary.uploader.upload(dataURI, {
       folder: "Cravings/User",
       width: 500,

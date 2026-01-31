@@ -148,7 +148,7 @@ const Login = () => {
                   Clear Form
                 </button>
                 <button
-                  type="submit"
+                  type="submit"                                                   
                   className="flex-1 bg-linear-to-r from-indigo-600 to-indigo-700 text-white font-bold py-4 px-6 rounded-lg hover:from-indigo-700 hover:to-indigo-800 transition duration-300 transform hover:scale-105 shadow-lg"
                 >
                   {isLoading ? "Submitting" : "Submit"}

@@ -132,6 +132,16 @@ const userSchema = mongoose.Schema(
         default: "N/A",
       },
     },
+    isActive:{
+      type: String,
+
+      // these are flags 
+      // user ka data delete ke naam pe uska flag change kar dete hai
+      // so delete process is like an update process
+      enum: ["active", "inactive", "blocked"],
+      required:true,
+      default: "active",
+    }
   },
   { timestamps: true },
 );
