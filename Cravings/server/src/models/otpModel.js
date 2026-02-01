@@ -1,21 +1,20 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const otpSchema = mongoose.Schema({
-    email:{
-        type:String,
-        required:true,
-    },
-    otp:{
-        type:String,
-        required: true,
-    },
-    createAt: {
-        type: String,
-        required: true,
-        expires: 300, // time in seconds
-    },
+  email: {
+    type: String,
+    required: true,
+  },
+  otp: {
+    type: String,
+    required: true,
+  },
+  createAt: {
+    type: Date,
+    default: Date.now,
+    expires: 300, // 5 minutes
+  },
 });
 
-const OTP = mongoose.model('OTP' , otpSchema);
+const OTP = mongoose.model("OTP", otpSchema);
 export default OTP;
-
