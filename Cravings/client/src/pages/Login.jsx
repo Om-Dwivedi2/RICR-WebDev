@@ -3,10 +3,15 @@ import toast from "react-hot-toast";
 import api from "../config/Api";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
+import ForgetPasswordModal from "../components/publicModals/ForgetPasswordModal";
 
 const Login = () => {
   const { setUser, setIsLogin, setRole } = useAuth();
   const navigate = useNavigate();
+
+  const [isForgetPasswordModelOpen, setIsForgetPasswordModelOpen] =
+    useState(false);
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -58,7 +63,7 @@ const Login = () => {
       sessionStorage.setItem("CravingUser", JSON.stringify(res.data.data));
       handleClearForm();
 
-     switch (res.data.data.role) {
+      switch (res.data.data.role) {
         case "manager": {
           setRole("manager");
           navigate("/resturant-dashboard");
@@ -83,8 +88,6 @@ const Login = () => {
         default:
           break;
       }
-
-      
     } catch (error) {
       console.log(error);
       toast.error(error.message);
@@ -113,7 +116,7 @@ const Login = () => {
               className="p-8"
             >
               {/* Personal Information */}
-              <div className="mb-10">
+              <div className="mb-5">
                 <div className="space-y-4">
                   <input
                     type="email"
@@ -137,6 +140,17 @@ const Login = () => {
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition"
                   />
                 </div>
+                <div className="w-full flex justify-end">
+                  <button
+                    className="text-(--color-primary) hover:text-(--color-secondary) cursor-pointer"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsForgetPasswordModelOpen(true);
+                    }}
+                  >
+                    Forget Password?
+                  </button>
+                </div>
               </div>
 
               {/* Submit Button */}
@@ -148,7 +162,7 @@ const Login = () => {
                   Clear Form
                 </button>
                 <button
-                  type="submit"                                                   
+                  type="submit"
                   className="flex-1 bg-linear-to-r from-indigo-600 to-indigo-700 text-white font-bold py-4 px-6 rounded-lg hover:from-indigo-700 hover:to-indigo-800 transition duration-300 transform hover:scale-105 shadow-lg"
                 >
                   {isLoading ? "Submitting" : "Submit"}
@@ -163,6 +177,12 @@ const Login = () => {
           </p>
         </div>
       </div>
+
+      {isForgetPasswordModelOpen && (
+        <ForgetPasswordModal
+          onClose={() => setIsForgetPasswordModelOpen(false)}
+        />
+      )}
     </>
   );
 };

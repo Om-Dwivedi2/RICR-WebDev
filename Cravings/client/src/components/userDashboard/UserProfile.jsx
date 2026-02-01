@@ -5,15 +5,22 @@ import UserImage from "../../assets/userImage.jpg";
 import { FaCamera } from "react-icons/fa";
 import api from "../../config/Api";
 import toast from "react-hot-toast";
+import ResetPasswordModal from "./modals/ResetPasswordModal";
 
 const UserProfile = () => {
   const { user, setUser } = useAuth();
+  //console.log(user);
+
   const [isEditProfileModalOpen, setIsEditProfileModalOpen] = useState(false);
+  const [isResetPasswordModalOpen, setIsResetPasswordModalOpen] =
+    useState(false);
   const [preview, setPreview] = useState("");
-  const [photo, setPhoto] = useState("");
 
   const changePhoto = async (photo) => {
     const form_Data = new FormData();
+
+    // console.log("Printing photo", photo);
+
     form_Data.append("image", photo);
     // form_Data.append("imageURL", preview);
 
@@ -32,9 +39,11 @@ const UserProfile = () => {
   const handlePhotoChange = (e) => {
     const file = e.target.files[0];
     const newPhotoURL = URL.createObjectURL(file);
-    //console.log(newPhotoURL);
+    console.log(newPhotoURL);
     setPreview(newPhotoURL);
-    changePhoto(file);
+    setTimeout(() => {
+      changePhoto(file);
+    }, 5000);
   };
 
   return (
@@ -68,10 +77,10 @@ const UserProfile = () => {
             </div>
             <div>
               <div className="text-3xl text-(--color-primary) font-bold">
-                {user.fullName || "UserName"}
+                {user.fullName || "User Name"}
               </div>
               <div className="text-gray-600 text-lg font-semibold">
-                {user.email || "use@example.com"}
+                {user.email || "user@example.com"}
               </div>
               <div className="text-gray-600 text-lg font-semibold">
                 {user.mobileNumber || "XXXXXXXXXX"}
@@ -79,11 +88,17 @@ const UserProfile = () => {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <button className="px-4 py-2 rounded bg-(--color-secondary) text-white" onClick={() => setIsEditProfileModalOpen(true)}>
+            <button
+              className="px-4 py-2 rounded bg-(--color-secondary) text-white"
+              onClick={() => setIsEditProfileModalOpen(true)}
+            >
               Edit
             </button>
-            <button className="px-4 py-2 rounded bg-(--color-secondary) text-white">
-              Reset Password
+            <button
+              className="px-4 py-2 rounded bg-(--color-secondary) text-white"
+              onClick={() => setIsResetPasswordModalOpen(true)}
+            >
+              Reset password
             </button>
           </div>
         </div>
@@ -91,6 +106,12 @@ const UserProfile = () => {
 
       {isEditProfileModalOpen && (
         <EditProfileModal onClose={() => setIsEditProfileModalOpen(false)} />
+      )}
+
+      {isResetPasswordModalOpen && (
+        <ResetPasswordModal
+          onClose={() => setIsResetPasswordModalOpen(false)}
+        />
       )}
     </>
   );
