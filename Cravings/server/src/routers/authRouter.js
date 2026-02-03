@@ -1,4 +1,5 @@
 import express from "express";
+import { OtpProtect } from "../middlewares/authMiddleware.js";
 import {
   UserRegister,
   UserLogin,

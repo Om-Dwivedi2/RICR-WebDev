@@ -5,7 +5,7 @@ import UserImage from "../../assets/userImage.jpg";
 import { FaCamera } from "react-icons/fa";
 import api from "../../config/Api";
 import toast from "react-hot-toast";
-import ResetPasswordModal from "./modals/ResetPasswordModal";
+import ResetPasswordModal from "./modals/ResetPasswordModals";
 
 const UserProfile = () => {
   const { user, setUser } = useAuth();
