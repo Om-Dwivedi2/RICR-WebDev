@@ -30,7 +30,7 @@ export const UserRegister = async (req, res, next) => {
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    console.log("Password Hashing Done. hashPassword = ", hashPassword);
+    console.log("Password Hashing Done. hashPassword = ", hashedPassword);
 
     const photoURL = `https://placehold.co/600x400?text=${fullName.charAt(0).toUpperCase()}`;
     const photo = {
